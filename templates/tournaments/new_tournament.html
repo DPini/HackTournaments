@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+{% block title %} New Tournament {% endblock %}
+{% block content %}
+  <div class="container">
+      <form action="" method="post">
+            {{ form.name.label }}
+            {{ form.name }}
+            {{ form.max_teams.label }}
+            {{ form.max_teams }}
+            {{ form.max_players_team.label }}
+            {{ form.max_players_team }}
+            {{ form.csrf_token }}
+            {{ form.submit }}
+      </form>
+    </div>
+
+  </div> <!-- /container -->
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+{% block title %} New Tournament {% endblock %}
+{% block content %}
+  <div class="container">
+    <h1> {{ tment.name }} </h1>
+    <h2> Teams </h2>
+    {% for t in teams %}
+
+    <h3> {{ t.name }} </h3>
+
+    {% endfor %}
+
+    <h2> #Teams: {{ teams.count() }} </h2>
+    <a class = "btn btn-default" href ="{{url_for('new_team',t_id=tment.id)}}">Create team</a>
+    <a class = "btn btn-default" href ="{{url_for('index')}}">Join team</a>
+
+
+  </div> <!-- /container -->
+{% endblock %}
